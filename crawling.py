@@ -11,7 +11,7 @@ company_urls = {
 }
 
 # CSV 파일을 저장할 폴더 생성 (폴더가 없으면 자동으로 생성)
-output_folder = '블라인드 현직자 리뷰'  # 리뷰 데이터를 저장할 폴더 이름
+output_folder = '블라인드 현직자 리뷰 모음'  # 리뷰 데이터를 저장할 폴더 이름
 os.makedirs(output_folder, exist_ok=True)  # 이미 폴더가 존재해도 오류 발생 X
 
 
