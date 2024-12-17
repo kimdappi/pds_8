@@ -22,18 +22,11 @@
   
 ### 코드 수정사항
 - ㅇ 기존 코드는 댓글을 단순히 출력했지만, 수정된 코드는 각 댓글을 별도의 행(row)으로 저장함. 
-- line. #ul → review_list : ul 태그가 리뷰 목록을 나타내므로 의미를 반영해 이름을 변경했습니다.
-#lis → review_items : 리뷰 항목(li 태그들)을 나타내므로 의미를 반영했습니다.
-#li → review_item : 반복문에서 각 리뷰 항목을 처리하므로 이름 변경.
-#review_text → review_title : 리뷰 제목을 저장하는 변수로 이름 변경.
-#불필요한 조건 제거:
-#lis = ul.find_all('li') if ul else []는 이미 ul의 존재를 확인했으므로 중복 조건을 제거했습니다.
-#에러 처리 강화:
-#review_title_tag 및 comment_tag 유효성 확인을 추가하여, 태그가 없는 경우에 대한 에러 방지.
-
-- ㅇ
-
-- 
+- line.17 ul → review_list : ul 태그가 리뷰 목록을 나타내므로 의미를 반영해 이름을 변경함.
+  line.21 lis → review_items : 리뷰 항목(li 태그들)을 나타내므로 의미를 반영함.
+  line.31 review_text → review_title : 리뷰 제목을 저장하는 변수로 이름 변경.
+- ㅇ 불필요한 조건을 제거함. lis = ul.find_all('li') if ul else []는 이미 ul의 존재를 확인했으므로 중복 조건을 제거.
+- ㅇ 에러 처리를 강화함. review_title_tag 및 comment_tag 유효성 확인을 추가하여, 태그가 없는 경우에 대한 에러 방지.
 ## 송진아preprocessing branch
 ### 기존 코드 형식
 - ㅇ
