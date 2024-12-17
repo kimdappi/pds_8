@@ -26,11 +26,12 @@
   
 ### 코드 수정사항
 - 기존 코드는 댓글을 단순히 출력했지만, 수정된 코드는 각 댓글을 별도의 행(row)으로 저장함. 
-- line.17 ul → review_list : ul 태그가 리뷰 목록을 나타내므로 의미를 반영해 이름을 변경함.
-  line.21 lis → review_items : 리뷰 항목(li 태그들)을 나타내므로 의미를 반영함.
-  line.31 review_text → review_title : 리뷰 제목을 저장하는 변수로 이름 변경.
+- ul → review_list: ul은 리뷰 목록을 나타내므로, 더 명확한 의미를 반영하기 위해 review_list로 변경.
+  lis → review_items: 각 li 태그는 개별 리뷰 항목을 나타내므로, review_items라는 이름을 사용하여 의미를 명확히 함.
+  review_text → review_title: 리뷰의 제목을 저장하는 변수이므로 review_title로 이름을 변경하여 명확하게 구분함.
 - 불필요한 조건을 제거함. lis = ul.find_all('li') if ul else []는 이미 ul의 존재를 확인했으므로 중복 조건을 제거.
 - 에러 처리를 강화함. review_title_tag 및 comment_tag 유효성 확인을 추가하여, 태그가 없는 경우에 대한 에러 방지.
+- os.makedirs()로 파일을 저장할 폴더가 없으면 자동으로 생성되도록 처리함. 이를 통해 코드 실행 시 자동으로 폴더가 생성되고, 그 안에 파일을 저장할 수 있게 함.
 
 
 ## 송진아preprocessing branch
