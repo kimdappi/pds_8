@@ -21,7 +21,7 @@ if response.status_code == 200:
         review_items = review_list.find_all('li')
 
         # CSV 파일 열기
-        with open('reviews.csv', mode='w', newline='', encoding='utf-8') as csv_file:
+        with open('.csv', mode='w', newline='', encoding='utf-8') as csv_file:
             csv_writer = csv.writer(csv_file)
             # CSV 파일 헤더 작성
             csv_writer.writerow(['리뷰 제목', '댓글'])
